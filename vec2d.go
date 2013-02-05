@@ -17,10 +17,6 @@ func New(x, y float64) *Vector {
 }
 
 func (self *Vector) Angle() float64 {
-	if self.getLengthSqrd() == 0 {
-		return 0
-	}
-
 	return math.Atan2(self.Y, self.X) / (math.Pi / 180)
 }
 
@@ -96,8 +92,4 @@ func (self *Vector) Divide(other *Vector) *Vector {
 
 func (self *Vector) DivideToFloat64(value float64) *Vector {
 	return New(self.X/value, self.Y/value)
-}
-
-func (self *Vector) getLengthSqrd() float64 {
-	return math.Pow(self.X, 2) + math.Pow(self.Y, 2)
 }
