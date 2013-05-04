@@ -9,6 +9,20 @@ func TestNew(t *testing.T) {
 	}
 }
 
+func TestIsEqual(t *testing.T) {
+	vector := New(2.0, 4.0)
+	the_same_vector := New(2.0, 4.0)
+	completely_different_vector := New(1.0, 3.0)
+
+	if !vector.IsEqual(the_same_vector) {
+		t.Error("vector should be equal to the_save_vector")
+	}
+
+	if vector.IsEqual(completely_different_vector) {
+		t.Error("vector should not be equal to completely_different_vector")
+	}
+}
+
 func TestAngle(t *testing.T) {
 	vector := New(2.0, 4.0)
 	zero_vector := New(0.0, 0.0)

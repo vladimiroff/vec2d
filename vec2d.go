@@ -16,6 +16,10 @@ func New(x, y float64) *Vector {
 	return new(Vector).Init(x, y)
 }
 
+func (self *Vector) IsEqual(other *Vector) bool {
+	return self.X == other.X && self.Y == other.Y
+}
+
 func (self *Vector) Angle() float64 {
 	return math.Atan2(self.Y, self.X) / (math.Pi / 180)
 }
