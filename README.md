@@ -17,7 +17,6 @@ TODO
  * Normalization
  * Projection
  * Interpolation
- * Docs
 
 License
 -------
