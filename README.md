@@ -1,7 +1,10 @@
 Vec2d
 ======
 
-[Go](http://golang.org/) implementation of 2D Vector
+Package vec2d offers a two-dimensional vector implementation for [Go](http://golang.org/).
+
+API reference is available on
+[godoc.org](http://godoc.org/github.com/Vladimiroff/vec2d).
 
 Installation
 -------
