@@ -100,57 +100,57 @@ func TestAddToFloat64(t *testing.T) {
 	}
 }
 
-func TestSubstitute(t *testing.T) {
+func TestSub(t *testing.T) {
 	vector := New(4.0, 4.0)
 	other := New(2.0, 3.0)
-	result := vector.Substitute(other)
+	result := vector.Sub(other)
 
 	if result.X != 2.0 && result.Y != 1.0 {
 		t.Error("Vector - Other vector gave X:", result.X, " Y:", result.Y)
 	}
 }
 
-func TestSubstituteToFloat64(t *testing.T) {
+func TestSubToFloat64(t *testing.T) {
 	vector := New(2.0, 4.0)
-	result := vector.SubstituteToFloat64(1.0)
+	result := vector.SubToFloat64(1.0)
 
 	if result.X != 1.0 && result.Y != 3.0 {
 		t.Error("Vector - float64 gave X:", result.X, " Y:", result.Y)
 	}
 }
 
-func TestMultiply(t *testing.T) {
+func TestMul(t *testing.T) {
 	vector := New(2.0, 4.0)
 	other := New(3.0, 5.0)
-	result := vector.Multiply(other)
+	result := vector.Mul(other)
 
 	if result.X != 6.0 && result.Y != 20.0 {
 		t.Error("Vector * Other gave X:", result.X, " Y:", result.Y)
 	}
 }
 
-func TestMultiplyToFloat64(t *testing.T) {
+func TestMulToFloat64(t *testing.T) {
 	vector := New(2.0, 4.0)
-	result := vector.MultiplyToFloat64(3.0)
+	result := vector.MulToFloat64(3.0)
 
 	if result.X != 6.0 && result.Y != 12.0 {
 		t.Error("Vector * Other gave X:", result.X, " Y:", result.Y)
 	}
 }
 
-func TestDivide(t *testing.T) {
+func TestDiv(t *testing.T) {
 	vector := New(4.0, 8.0)
 	other := New(2.0, 4.0)
-	result := vector.Divide(other)
+	result := vector.Div(other)
 
 	if result.X != 2.0 && result.Y != 2.0 {
 		t.Error("Vector * Other gave X:", result.X, " Y:", result.Y)
 	}
 }
 
-func TestDivideToFloat64(t *testing.T) {
+func TestDivToFloat64(t *testing.T) {
 	vector := New(2.0, 4.0)
-	result := vector.DivideToFloat64(2.0)
+	result := vector.DivToFloat64(2.0)
 
 	if result.X != 1.0 && result.Y != 2.0 {
 		t.Error("Vector * Other gave X:", result.X, " Y:", result.Y)
