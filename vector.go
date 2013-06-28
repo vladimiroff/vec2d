@@ -76,49 +76,49 @@ func (self *Vector) Rotate(angle_degrees float64) {
 	self.Y = y
 }
 
-// Add creates new Vector and sets its X and Y to the sum of these in self and other
+// Add changes Vector's X and Y by collecting them with other's
 func (self *Vector) Add(other *Vector) {
 	self.X += other.X
 	self.Y += other.Y
 }
 
-// Div returns new Vector adding given value to self's X and Y
+// AddToFloat64 changes Vector's X and Y by collecting them with value
 func (self *Vector) AddToFloat64(value float64) {
 	self.X += value
 	self.Y += value
 }
 
-// Add creates a new Vector and sets its X and Y to the difference self-other
+// Sub changes Vector's X and Y by substracting them with other's
 func (self *Vector) Sub(other *Vector) {
 	self.X -= other.X
 	self.Y -= other.Y
 }
 
-// Div returns a new Vector, taking given value from self's X and Y
+// SubToFloat64 changes Vector's X and Y by substracting them with value
 func (self *Vector) SubToFloat64(value float64) {
 	self.X -= value
 	self.Y -= value
 }
 
-// Mul returns a new Vector by multiplication of self and other
+// Mul changes Vector's X and Y by multiplying them with other's
 func (self *Vector) Mul(other *Vector) {
 	self.X *= other.X
 	self.Y *= other.Y
 }
 
-// Div returns a new Vector using multiplication of self's X and Y by given value
+// MulToFloat64 changes Vector's X and Y by multiplying them with value
 func (self *Vector) MulToFloat64(value float64) {
 	self.X *= value
 	self.Y *= value
 }
 
-// Div returns a new Vector by dividing self and other
+// Div changes Vector's X and Y by dividing them with other's
 func (self *Vector) Div(other *Vector) {
 	self.X /= other.X
 	self.Y /= other.Y
 }
 
-// Div returns a new Vector by dividing self's X and Y by given value
+// DivToFloat64 changes Vector's X and Y by dividing them with value
 func (self *Vector) DivToFloat64(value float64) {
 	self.X /= value
 	self.Y /= value

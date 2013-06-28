@@ -39,17 +39,17 @@ func Collect(first, second *Vector) *Vector {
 	return New(first.X+second.X, first.Y+second.Y)
 }
 
-// Collect returns new Vector adding given value to first's X and Y
+// CollectToFloat64 returns new Vector adding given value to first's X and Y
 func CollectToFloat64(vector *Vector, value float64) *Vector {
 	return New(vector.X+value, vector.Y+value)
 }
 
-// Add creates a new Vector and sets its X and Y to the difference first-second
+// Sub creates a new Vector and sets its X and Y to the difference first-second
 func Sub(first, second *Vector) *Vector {
 	return New(first.X-second.X, first.Y-second.Y)
 }
 
-// Div returns a new Vector, taking given value from first's X and Y
+// SubToFloat64 returns a new Vector, taking given value from first's X and Y
 func SubToFloat64(vector *Vector, value float64) *Vector {
 	return New(vector.X-value, vector.Y-value)
 }
@@ -59,7 +59,7 @@ func Mul(first, second *Vector) *Vector {
 	return New(first.X*second.X, first.Y*second.Y)
 }
 
-// Div returns a new Vector using multiplication of first's X and Y by given value
+// MulToFloat64 returns a new Vector using multiplication of first's X and Y by given value
 func MulToFloat64(vector *Vector, value float64) *Vector {
 	return New(vector.X*value, vector.Y*value)
 }
@@ -69,7 +69,7 @@ func Div(first, second *Vector) *Vector {
 	return New(first.X/second.X, first.Y/second.Y)
 }
 
-// Div returns a new Vector by dividing first's X and Y by given value
+// DivToFloat64 returns a new Vector by dividing first's X and Y by given value
 func DivToFloat64(vector *Vector, value float64) *Vector {
 	return New(vector.X/value, vector.Y/value)
 }
