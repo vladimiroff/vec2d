@@ -77,41 +77,49 @@ func (self *Vector) Rotate(angle_degrees float64) {
 }
 
 // Add creates new Vector and sets its X and Y to the sum of these in self and other
-func (self *Vector) Add(other *Vector) *Vector {
-	return New(self.X+other.X, self.Y+other.Y)
+func (self *Vector) Add(other *Vector) {
+	self.X += other.X
+	self.Y += other.Y
 }
 
 // Div returns new Vector adding given value to self's X and Y
-func (self *Vector) AddToFloat64(value float64) *Vector {
-	return New(self.X+value, self.Y+value)
+func (self *Vector) AddToFloat64(value float64) {
+	self.X += value
+	self.Y += value
 }
 
 // Add creates a new Vector and sets its X and Y to the difference self-other
-func (self *Vector) Sub(other *Vector) *Vector {
-	return New(self.X-other.X, self.Y-other.Y)
+func (self *Vector) Sub(other *Vector) {
+	self.X -= other.X
+	self.Y -= other.Y
 }
 
 // Div returns a new Vector, taking given value from self's X and Y
-func (self *Vector) SubToFloat64(value float64) *Vector {
-	return New(self.X-value, self.Y-value)
+func (self *Vector) SubToFloat64(value float64) {
+	self.X -= value
+	self.Y -= value
 }
 
 // Mul returns a new Vector by multiplication of self and other
-func (self *Vector) Mul(other *Vector) *Vector {
-	return New(self.X*other.X, self.Y*other.Y)
+func (self *Vector) Mul(other *Vector) {
+	self.X *= other.X
+	self.Y *= other.Y
 }
 
 // Div returns a new Vector using multiplication of self's X and Y by given value
-func (self *Vector) MulToFloat64(value float64) *Vector {
-	return New(self.X*value, self.Y*value)
+func (self *Vector) MulToFloat64(value float64) {
+	self.X *= value
+	self.Y *= value
 }
 
 // Div returns a new Vector by dividing self and other
-func (self *Vector) Div(other *Vector) *Vector {
-	return New(self.X/other.X, self.Y/other.Y)
+func (self *Vector) Div(other *Vector) {
+	self.X /= other.X
+	self.Y /= other.Y
 }
 
 // Div returns a new Vector by dividing self's X and Y by given value
-func (self *Vector) DivToFloat64(value float64) *Vector {
-	return New(self.X/value, self.Y/value)
+func (self *Vector) DivToFloat64(value float64) {
+	self.X /= value
+	self.Y /= value
 }

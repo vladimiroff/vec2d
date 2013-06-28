@@ -84,9 +84,9 @@ func ExampleVector_GetDistance() {
 func ExampleVector_Add() {
 	vector := vec2d.New(2.0, 4.0)
 	other := vec2d.New(3.0, 5.0)
-	result := vector.Add(other)
+	vector.Add(other)
 
-	fmt.Printf("Vector + Other vector gave new vector with X: %v, Y: %v\n", result.X, result.Y)
+	fmt.Printf("Vector + Other vector gave new vector with X: %v, Y: %v\n", vector.X, vector.Y)
 	// Output: Vector + Other vector gave new vector with X: 5, Y: 9
 }
 
