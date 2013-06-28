@@ -15,7 +15,7 @@ package vec2d
 
 import "math"
 
-// Rotate Vector by given angle degrees in float64 and returns a new one
+// Rotated rotates a Vector by given angle degrees in float64 and returns a new one
 func Rotated(vector *Vector, angle_degrees float64) *Vector {
 	new_vector := New(vector.X, vector.Y)
 	new_vector.Rotate(angle_degrees)
