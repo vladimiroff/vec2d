@@ -76,26 +76,6 @@ func (self *Vector) Rotate(angle_degrees float64) {
 	self.Y = y
 }
 
-// Rotated does the same as Vector.Rotate, except does not change
-// the given instance, but creates and returns a new one, instead.
-func (self *Vector) Rotated(angle_degrees float64) *Vector {
-	vector := New(self.X, self.Y)
-	vector.Rotate(angle_degrees)
-	return vector
-}
-
-// GetAngleBetween returns the angle between to Vectors in float64
-func (self *Vector) GetAngleBetween(other *Vector) float64 {
-	cross := self.X*other.Y - self.Y*other.X
-	dot := self.X*other.X + self.Y*other.Y
-	return math.Atan2(cross, dot) / (math.Pi / 180)
-}
-
-// GetDistance returns the distance betweeen to Vectors in float64
-func (self *Vector) GetDistance(other *Vector) float64 {
-	return math.Sqrt(math.Pow(self.X-other.X, 2) + math.Pow(self.Y-other.Y, 2))
-}
-
 // Add creates new Vector and sets its X and Y to the sum of these in self and other
 func (self *Vector) Add(other *Vector) *Vector {
 	return New(self.X+other.X, self.Y+other.Y)

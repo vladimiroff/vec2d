@@ -55,7 +55,7 @@ func ExampleVector_edit() {
 func ExampleVector_GetAngleBetween() {
 	vector := vec2d.New(2.0, 4.0)
 	other := vec2d.New(5.0, 12.0)
-	angle_between := vector.GetAngleBetween(other)
+	angle_between := vec2d.GetAngleBetween(vector, other)
 
 	fmt.Printf("Vector{X: %v, Y: %v}\n", vector.X, vector.Y)
 	fmt.Printf("Vector{X: %v, Y: %v}\n", other.X, other.Y)
@@ -69,7 +69,7 @@ func ExampleVector_GetAngleBetween() {
 func ExampleVector_GetDistance() {
 	vector := vec2d.New(2.0, 4.0)
 	other := vec2d.New(5.0, 12.0)
-	distance := vector.GetDistance(other)
+	distance := vec2d.GetDistance(vector, other)
 
 	fmt.Printf("Vector{X: %v, Y: %v}\n", vector.X, vector.Y)
 	fmt.Printf("Vector{X: %v, Y: %v}\n", other.X, other.Y)

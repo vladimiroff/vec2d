@@ -165,36 +165,3 @@ func TestRotate(t *testing.T) {
 		t.Error("Vector.Rotate(2.0) gave X:", vector.X, " Y:", vector.Y)
 	}
 }
-
-func TestRotated(t *testing.T) {
-	vector := New(2.0, 4.0)
-	result := vector.Rotated(2.0)
-
-	if result.X != 1.8591836672281876 && result.Y != 4.067362301481385 {
-		t.Error("Vector.Rotate(2.0) gave X:", result.X, " Y:", result.Y)
-	}
-
-	if vector == result {
-		t.Error("Vector.Rotated did not return a copy object")
-	}
-}
-
-func TestGetAngleBetween(t *testing.T) {
-	vector := New(2.0, 4.0)
-	other := New(5.0, 12.0)
-	angle_between := vector.GetAngleBetween(other)
-
-	if angle_between != 3.945186229037563 {
-		t.Error("Angle between vector and other happens to be:", angle_between)
-	}
-}
-
-func TestGetDistance(t *testing.T) {
-	vector := New(2.0, 4.0)
-	other := New(5.0, 12.0)
-	distance := vector.GetDistance(other)
-
-	if distance != 8.54400374531753 {
-		t.Error("Distance between vector and other happens to be:", distance)
-	}
-}
