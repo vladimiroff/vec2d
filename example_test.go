@@ -52,7 +52,7 @@ func ExampleVector_edit() {
 	// Angle: 45
 }
 
-func ExampleVector_GetAngleBetween() {
+func ExampleGetAngleBetween() {
 	vector := vec2d.New(2.0, 4.0)
 	other := vec2d.New(5.0, 12.0)
 	angle_between := vec2d.GetAngleBetween(vector, other)
@@ -66,7 +66,7 @@ func ExampleVector_GetAngleBetween() {
 	// Angle between: 3.945186229037563
 }
 
-func ExampleVector_GetDistance() {
+func ExampleGetDistance() {
 	vector := vec2d.New(2.0, 4.0)
 	other := vec2d.New(5.0, 12.0)
 	distance := vec2d.GetDistance(vector, other)
