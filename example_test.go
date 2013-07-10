@@ -80,19 +80,19 @@ func ExampleGetDistance() {
 	// Distance between: 8.54400374531753
 }
 
-// Note that operations like Add, Sub, Mul and Div changes the Vector
+// Note that operations like Collect, Sub, Mul and Div changes the Vector
 // if they are called as its methods. If you want to create a new instance
 // you have to use the functions instead
-func ExampleVector_Add() {
+func ExampleVector_Collect() {
 	vector := vec2d.New(2.0, 4.0)
 	other := vec2d.New(3.0, 5.0)
-	vector.Add(other)
+	vector.Collect(other)
 	result := vec2d.Collect(vector, other)
 
-	fmt.Printf("Vector.Add(Other) has changed Vector's values to X: %v, Y: %v\n", vector.X, vector.Y)
+	fmt.Printf("Vector.Collect(Other) has changed Vector's values to X: %v, Y: %v\n", vector.X, vector.Y)
 	fmt.Printf("vec2d.Collect(Vector, Other) gave a new vector with X: %v, Y: %v\n", result.X, result.Y)
 	// Output:
-	// Vector.Add(Other) has changed Vector's values to X: 5, Y: 9
+	// Vector.Collect(Other) has changed Vector's values to X: 5, Y: 9
 	// vec2d.Collect(Vector, Other) gave a new vector with X: 8, Y: 14
 }
 

@@ -76,14 +76,14 @@ func (self *Vector) Rotate(angle_degrees float64) {
 	self.Y = y
 }
 
-// Add changes Vector's X and Y by collecting them with other's
-func (self *Vector) Add(other *Vector) {
+// Collect changes Vector's X and Y by collecting them with other's
+func (self *Vector) Collect(other *Vector) {
 	self.X += other.X
 	self.Y += other.Y
 }
 
-// AddToFloat64 changes Vector's X and Y by collecting them with value
-func (self *Vector) AddToFloat64(value float64) {
+// CollectToFloat64 changes Vector's X and Y by collecting them with value
+func (self *Vector) CollectToFloat64(value float64) {
 	self.X += value
 	self.Y += value
 }

@@ -90,19 +90,19 @@ func TestRotate(t *testing.T) {
 	}
 }
 
-func TestAdd(t *testing.T) {
+func TestCollect(t *testing.T) {
 	vector := New(2.0, 4.0)
 	other := New(3.0, 5.0)
-	vector.Add(other)
+	vector.Collect(other)
 
 	if vector.X != 5.0 && vector.Y != 9.0 {
 		t.Error("Vector + Other vector gave X:", vector.X, " Y:", vector.Y)
 	}
 }
 
-func TestAddToFloat64(t *testing.T) {
+func TestCollectToFloat64(t *testing.T) {
 	vector := New(2.0, 4.0)
-	vector.AddToFloat64(3.0)
+	vector.CollectToFloat64(3.0)
 
 	if vector.X != 5.0 && vector.Y != 6.0 {
 		t.Error("Vector + float64 gave X:", vector.X, " Y:", vector.Y)
