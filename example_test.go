@@ -14,8 +14,8 @@
 package vec2d_test
 
 import (
-	"github.com/Vladimiroff/vec2d"
 	"fmt"
+	"github.com/Vladimiroff/vec2d"
 )
 
 // In this example we create new vector with X=2 and Y=4,
@@ -27,7 +27,7 @@ func ExampleVector_create() {
 
 	fmt.Printf("Vector{X: %v, Y: %v}\n", vector.X, vector.Y)
 	fmt.Printf("Length: %v\n", length)
-	fmt.Printf("Angle: %v\n",angle)
+	fmt.Printf("Angle: %v\n", angle)
 	// Output:
 	// Vector{X: 2, Y: 4}
 	// Length: 4.47213595499958
@@ -45,7 +45,7 @@ func ExampleVector_edit() {
 
 	fmt.Printf("Vector{X: %v, Y: %v}\n", vector.X, vector.Y)
 	fmt.Printf("Length: %v\n", length)
-	fmt.Printf("Angle: %v\n",angle)
+	fmt.Printf("Angle: %v\n", angle)
 	// Output:
 	// Vector{X: 4, Y: 4}
 	// Length: 5.656854249492381
