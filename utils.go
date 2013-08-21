@@ -31,7 +31,7 @@ func GetAngleBetween(first, second *Vector) float64 {
 
 // GetDistance returns the distance between two Vectors in float64
 func GetDistance(first, second *Vector) float64 {
-	return math.Sqrt(math.Pow(first.X-second.X, 2) + math.Pow(first.Y-second.Y, 2))
+	return Sub(first, second).Length()
 }
 
 // Collect creates new Vector and sets its X and Y to the sum of these in first and second
