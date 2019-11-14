@@ -11,11 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 package vec2d_test
 
 import (
 	"fmt"
-	"github.com/Vladimiroff/vec2d"
+
+	"github.com/vladimiroff/vec2d"
 )
 
 // In this example we create new vector with X=2 and Y=4,

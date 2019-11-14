@@ -4,12 +4,12 @@ Vec2d
 Package vec2d offers a two-dimensional vector implementation for [Go](http://golang.org/).
 
 API reference is available on
-[godoc.org](http://godoc.org/github.com/Vladimiroff/vec2d).
+[godoc.org](http://godoc.org/github.com/vladimiroff/vec2d).
 
 Installation
 -------
 
-    go get github.com/Vladimiroff/vec2d
+    go get github.com/vladimiroff/vec2d
 
 TODO
 -------
