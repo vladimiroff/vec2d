@@ -22,16 +22,9 @@ type Vector struct {
 	X, Y float64
 }
 
-// Init initializes already created vector
-func (v *Vector) Init(x, y float64) *Vector {
-	v.X = x
-	v.Y = y
-	return v
-}
-
 // New returns a new vector
 func New(x, y float64) *Vector {
-	return new(Vector).Init(x, y)
+	return &Vector{X: x, Y: y}
 }
 
 // IsEqual compares а Vector with another and returns true if they're equal
